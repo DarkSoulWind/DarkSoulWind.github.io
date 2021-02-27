@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> Computerhub hardware </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="mystyle.css">
+
+<style>
+
+.topics {
+	list-style-type: none;
+}
+
+.choose {
+	border-radius: 10px;
+  	background-color: #f4511e;
+  	border: none;
+  	color: #FFFFFF;
+  	text-align: center;
+  	font-size: 38px;
+  	padding: 20px;
+  	width: 150px;
+  	transition: all 0.5s;
+	display: inline-block;
+  	cursor: pointer;
+  	margin: 5px;
+}
+
+.choose span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.choose span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.choose:hover span {
+	padding-right: 25px;
+}
+
+.choose:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+</style>
+
+</head>
+
+<body style="font-family:helvetica; background-color: #171717; color: white;">
+
+<ul class="title"><a href="homepage.html">
+	<li class="title half angel"><h1>The Computer</h1></li>
+	<li class="title half hub"><h1>hub</h1></li>
+</a></ul>
+
+<ul class="navigator">
+	<li class="navigator links"><a href="hardware.html">Hardware</a></li>
+	<li class="navigator links"><a href="software.html">Software</a></li>
+	<li class="navigator links"><a href=#networking>Networking</a></li>
+</ul>
+
+<h2> Hardware is an integral part of computers. Of course without hardware, where is the computer supposed to be? </h2>
+<h3> What area of computer hardware would you like to learn about? </h3>
+<ul class="topics">
+	<li class="choose"><button onclick="showCPU()"><span>CPU</span></button></li>
+	<li class="choose"><button onclick="showRAM()"><span>RAM</span></button></li>
+	<li class="choose"><button onclick="showStorage()"><span>Secondary Storage</span></button></li>
+</ul>
+
+<div id="change1"><h5> Select a topic! </h5></div>
+<img id="myImage" src="http://www.pngmart.com/files/7/Desktop-Computer-PNG-File.png" alt="photo" width="500" height="333">
+<div id="change2"><p></p></div>
+
+<p>Enjoy some study music :)</p>
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/991807054&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/hazysofia" title="hazy sofia" target="_blank" style="color: #cccccc; text-decoration: none;">The best singer ever</a> · <a href="https://soundcloud.com/hazysofia/boats" title="boats" target="_blank" style="color: #cccccc; text-decoration: none;">The best song ever</a></div>
+
+<script>
+function showCPU() {
+	var item = document.getElementById("change1");
+	var info = "The Central Processing Unit - also referred to as the processor - is the brain of the computer system. It processes all of the data and instructions that make the system work. The processing power of a CPU depends on different characteristics, such as its clock speed, number of cores and cache size.";
+	if (item.innerHTML !== info) {
+		item.innerHTML = info;
+	}
+	document.getElementById("myImage").src="https://pngimg.com/uploads/cpu/cpu_PNG50.png";
+	
+	item = document.getElementById("change2");
+	info = "This is an Intel Core i9-12900K CPU.";
+	if (item.innerHTML !== info) {
+		item.innerHTML = info;
+	}
+}
+
+function showRAM() {
+	var item = document.getElementById("change1");
+	var info = "Random Access Memory - also referred to as memory - is the main memory used in the computer, storing all the data and instructions that are currently being used. It is volatile, meaning that data is permanently wiped from the RAM when the computer is not in use.";
+	if (item.innerHTML !== info) {
+		item.innerHTML = info;
+	}
+	document.getElementById("myImage").src="https://img1.exportersindia.com/product_images/bc-full/2018/8/5842352/server-memory-1535010451-4222260.png";
+	
+	item = document.getElementById("change2");
+	info = "This is 16GB of Corsair Vengeance RGB Pro RAM.";
+	if (item.innerHTML !== info) {
+		item.innerHTML = info;
+	}
+}
+
+function showStorage() {
+	var item = document.getElementById("change1");
+	var info = "Secondary storage - also referred to as the hard disk - is where all the data is stored when it is not in use. It is non-volatile, meaning unlike the RAM, data isn't wiped when the computer is turned off.";
+	if (item.innerHTML !== info) {
+		item.innerHTML = info;
+	}
+	document.getElementById("myImage").src="https://images.samsung.com/is/image/samsung/uk-970-evo-nvme-m2-ssd-mz-v7e250bw-frontblack-100317936?$720_576_PNG$";
+	
+	item = document.getElementById("change2");
+	info = "This is a Samsung 970 Evo solid state drive.";
+	if (item.innerHTML !== info) {
+		item.innerHTML = info;
+	}
+}
+</script>
+
+</body>
+</html>

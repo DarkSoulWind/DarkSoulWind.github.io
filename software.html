@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> Computerhub software </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="mystyle.css">
+
+<style>
+
+.topics {
+	list-style-type: none;
+}
+
+.choose {
+	border-radius: 10px;
+  	background-color: #f4511e;
+  	border: none;
+  	color: #FFFFFF;
+  	text-align: center;
+  	font-size: 38px;
+  	padding: 20px;
+  	width: 150px;
+  	transition: all 0.5s;
+	display: inline-block;
+  	cursor: pointer;
+  	margin: 5px;
+}
+
+.choose span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.choose span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.choose:hover span {
+	padding-right: 25px;
+}
+
+.choose:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+</style>
+
+</head>
+
+<body style="font-family:helvetica; background-color: #171717; color: white;">
+
+<ul class="title"><a href="homepage.html">
+	<li class="title half angel"><h1>The Computer</h1></li>
+	<li class="title half hub"><h1>hub</h1></li>
+</a></ul>
+
+<ul class="navigator">
+	<li class="navigator links"><a href="hardware.html">Hardware</a></li>
+	<li class="navigator links"><a href="software.html">Software</a></li>
+	<li class="navigator links"><a href=#networking>Networking</a></li>
+</ul>
+
+<h2> Software is also an important part of computer systems. Without software, what is your computer supposed to run? A mile? </h2>
+<h3> What area of computer software would you like to learn about? </h3>
+<ul class="topics">
+	<li class="choose"><button onclick="showOS()"><span>The OS</span></button></li>
+	<li class="choose"><button onclick="showUtility()"><span>Utility Software</span></button></li>
+	<li class="choose"><button onclick="showLicence()"><span>Software Licences</span></button></li>
+</ul>
+
+<div id="change1"><h5> Select a topic! </h5></div>
+<img id="myImage" src="http://www.pngmart.com/files/3/Software-PNG-Picture.png" alt="photo" width="500" height="333">
+<div id="change2"><p></p></div>
+
+<p>Enjoy some study music :)</p>
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/991807054&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/hazysofia" title="hazy sofia" target="_blank" style="color: #cccccc; text-decoration: none;">The best singer ever</a> · <a href="https://soundcloud.com/hazysofia/boats" title="boats" target="_blank" style="color: #cccccc; text-decoration: none;">The best song ever</a></div>
+
+<script>
+function showOS() {
+	var item = document.getElementById("change1");
+	var info = "An OS (Operating System) is a complex piece of software found on most computer systems.";
+	if (item.innerHTML !== info) {
+		item.innerHTML = info;
+	}
+	document.getElementById("myImage").src="https://media.discordapp.net/attachments/458708267670044683/814960360218034246/unknown.png";
+	document.getElementById("myImage").width="500";
+	document.getElementById("myImage").height="444";
+	
+	item = document.getElementById("change2");
+	info = "This is a desktop PC running Windows 95.";
+	if (item.innerHTML !== info) {
+		item.innerHTML = info;
+	}
+}
+
+function showUtility() {
+	var item = document.getElementById("change1");
+	var info = "Utility system software helps to maintain or configure a computer. Many useful utilities are already pre-installed with the operating system.";
+	if (item.innerHTML !== info) {
+		item.innerHTML = info;
+	}
+	document.getElementById("myImage").src="https://media.discordapp.net/attachments/458708267670044683/814962208441761792/unknown.png";
+	document.getElementById("myImage").width="500";
+	document.getElementById("myImage").height="333";
+	
+	item = document.getElementById("change2");
+	info = "This is picture represents an anti-virus software, one of the most common utlity softwares.";
+	if (item.innerHTML !== info) {
+		item.innerHTML = info;
+	}
+}
+
+function showLicence() {
+	var item = document.getElementById("change1");
+	var info = "A software licence is an agreement that allows one or more individuals to legally use a piece of software. Licences and copyright laws control whether a piece of software can be modified or shared.";
+	if (item.innerHTML !== info) {
+		item.innerHTML = info;
+	}
+	document.getElementById("myImage").src="https://cdn2.iconfinder.com/data/icons/metro-uinvert-dock/256/OS_Android.png";
+	document.getElementById("myImage").width="325";
+	document.getElementById("myImage").height="333";
+	
+	item = document.getElementById("change2");
+	info = "Android OS, a very popular open source operating system for smartphones.";
+	if (item.innerHTML !== info) {
+		item.innerHTML = info;
+	}
+}
+</script>
+
+</body>
+</html>
