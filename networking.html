@@ -26,40 +26,43 @@
 	<li class="navigator links"><a href="networking.html">Networking</a></li>
 </ul>
 
-<h2> Software is also an important part of computer systems. Without software, what is your computer supposed to run? A mile? </h2>
-<h3> What area of computer software would you like to learn about? </h3>
+<h2> Computer networks allow the sharing of files, data, and other types of information giving authorised users the ability to access information stored on other computers on the network. </h2>
+<h3> What area of computer networks would you like to learn about? </h3>
 <ul class="topics">
-	<li class="choose"><button onclick="showOS()"><span><h2>The OS</h2></span></button></li>
-	<li class="choose"><button onclick="showUtility()"><span><h2>Utility Software</h2></span></button></li>
-	<li class="choose"><button onclick="showLicence()"><span><h2>Software Licences</h2></span></button></li>
+	<li class="choose"><button onclick="showHardware()"><span><h2>Network hardware</h2></span></button></li>
+	<li class="choose"><button onclick="showTypes()"><span><h2>Network types</h2></span></button></li>
+	<li class="choose"><button onclick="showProtocols()"><span><h2>Network protocols</h2></span></button></li>
 </ul>
 
 <div id="change1"><h5> Select a topic! </h5></div>
-<img id="myImage" src="http://www.pngmart.com/files/3/Software-PNG-Picture.png" alt="photo" width="500" height="333">
-<div id="change2"><p></p></div>
+<img id="myImage" src="https://lh3.googleusercontent.com/proxy/8ovUIRc9TMkuShH0xSOMaUaE1XCq7rxFAze2nBvp1EEWNeAF_ACWyWDKrBRcI353kQ8LEZqkxuIEYCl6_qWZ9sK4ISjjbyUCVI1xaYUe2D7HSuP8" alt="photo" width="500" height="333">
+<p id="change2"></p>
+<img id="myImage2">
 
 <p>Enjoy some study music :)</p>
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/991807054&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/hazysofia" title="hazy sofia" target="_blank" style="color: #cccccc; text-decoration: none;">The best singer ever</a> · <a href="https://soundcloud.com/hazysofia/boats" title="boats" target="_blank" style="color: #cccccc; text-decoration: none;">The best song ever</a></div>
 
 <script>
-function showOS() {
+function showHardware() {
 	var item = document.getElementById("change1");
-	var info = "An OS (Operating System) is a complex piece of software found on most computer systems.";
+	var info = "Networks require certain pieces of hardware in order to function.";
 	if (item.innerHTML !== info) {
 		item.innerHTML = info;
 	}
-	document.getElementById("myImage").src="https://media.discordapp.net/attachments/458708267670044683/814960360218034246/unknown.png";
+	document.getElementById("myImage").src="https://media.discordapp.net/attachments/421038494169694219/815293354257940540/unknown.png";
 	document.getElementById("myImage").width="500";
 	document.getElementById("myImage").height="444";
 	
 	item = document.getElementById("change2");
-	info = "This is a desktop PC running Windows 95.";
+	info = "A network switch connects devices on a LAN (Local Area Network). They receive data from one device and transmit this data to the device on the network with the correct MAC address.";
 	if (item.innerHTML !== info) {
 		item.innerHTML = info;
 	}
+	
+	document.getElementById("myImage2").src="https://media.discordapp.net/attachments/421038494169694219/815295595311792149/unknown.png";
 }
 
-function showUtility() {
+function showTypes() {
 	var item = document.getElementById("change1");
 	var info = "Utility system software helps to maintain or configure a computer. Many useful utilities are already pre-installed with the operating system.";
 	if (item.innerHTML !== info) {
@@ -76,7 +79,7 @@ function showUtility() {
 	}
 }
 
-function showLicence() {
+function showProtocols() {
 	var item = document.getElementById("change1");
 	var info = "A software licence is an agreement that allows one or more individuals to legally use a piece of software. Licences and copyright laws control whether a piece of software can be modified or shared.";
 	if (item.innerHTML !== info) {
