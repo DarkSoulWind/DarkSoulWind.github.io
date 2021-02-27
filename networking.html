@@ -5,52 +5,9 @@
 <title> Computerhub networking </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="mystyle.css">
+<link rel="stylesheet" href="buttonstyles.css">
 
 <style>
-
-.topics {
-	list-style-type: none;
-}
-
-.choose {
-	border-radius: 10px;
-  	background-color: #f4511e;
-  	border: none;
-  	color: #FFFFFF;
-  	text-align: center;
-  	font-size: 38px;
-  	padding: 20px;
-  	width: 150px;
-  	transition: all 0.5s;
-	display: inline-block;
-  	cursor: pointer;
-  	margin: 5px;
-}
-
-.choose span {
-	cursor: pointer;
-	display: inline-block;
-	position: relative;
-	transition: 0.5s;
-}
-
-.choose span:after {
-	content: '\00bb';
-	position: absolute;
-	opacity: 0;
-	top: 0;
-	right: -20px;
-	transition: 0.5s;
-}
-
-.choose:hover span {
-	padding-right: 25px;
-}
-
-.choose:hover span:after {
-	opacity: 1;
-	right: 0;
-}
 
 </style>
 
@@ -72,9 +29,9 @@
 <h2> Software is also an important part of computer systems. Without software, what is your computer supposed to run? A mile? </h2>
 <h3> What area of computer software would you like to learn about? </h3>
 <ul class="topics">
-	<li class="choose"><button onclick="showOS()"><span>The OS</span></button></li>
-	<li class="choose"><button onclick="showUtility()"><span>Utility Software</span></button></li>
-	<li class="choose"><button onclick="showLicence()"><span>Software Licences</span></button></li>
+	<li class="choose"><button onclick="showOS()"><span><h2>The OS</h2></span></button></li>
+	<li class="choose"><button onclick="showUtility()"><span><h2>Utility Software</h2></span></button></li>
+	<li class="choose"><button onclick="showLicence()"><span><h2>Software Licences</h2></span></button></li>
 </ul>
 
 <div id="change1"><h5> Select a topic! </h5></div>
