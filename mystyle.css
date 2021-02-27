@@ -1,0 +1,50 @@
+.title {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #1f1f1f;
+}
+
+.title a:visited {
+	color: white;
+}
+
+.half {
+	float: left;
+}
+
+.angel {
+	display: block;
+	padding: 1px;
+ 	background-color: #171717;
+	color: white;
+}
+
+.hub {
+	display: block;
+	padding: 1px;
+ 	background-color: #e07800;
+}
+
+.navigator {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #adadad;
+}
+
+.links {
+	float: left;
+}
+
+.links a {
+	display: block;
+	padding: 8px;
+ 	background-color: #dbdbdb;
+}
+
+.links a:hover {
+	background-color: #adadad;
+}
