@@ -34,7 +34,7 @@
 	<li class="choose"><button onclick="showProtocols()"><span><h2>Network protocols</h2></span></button></li>
 </ul>
 
-<div id="change1"><h5> Select a topic! </h5></div>
+<div id="change1"><h4> Select a topic! </h4></div>
 <img id="myImage" src="https://lh3.googleusercontent.com/proxy/8ovUIRc9TMkuShH0xSOMaUaE1XCq7rxFAze2nBvp1EEWNeAF_ACWyWDKrBRcI353kQ8LEZqkxuIEYCl6_qWZ9sK4ISjjbyUCVI1xaYUe2D7HSuP8" alt="photo">
 <p id="change2"></p>
 <img id="myImage2">
@@ -45,41 +45,35 @@
 
 <script>
 function showHardware() {
-	var item = document.getElementById("change1");
-	var info = "Networks require certain pieces of hardware in order to function.";
-	item.innerHTML = info;
+	document.getElementById("change1").innerHTML = "Networks require certain pieces of hardware in order to function.";
 	
-	document.getElementById("myImage").src="https://media.discordapp.net/attachments/421038494169694219/815293354257940540/unknown.png";
+	document.getElementById("myImage").src = "https://media.discordapp.net/attachments/421038494169694219/815293354257940540/unknown.png";
 	
-	item = document.getElementById("change2");
-	info = "A network switch connects devices on a LAN (Local Area Network). They receive data from one device and transmit this data to the device on the network with the correct MAC address.";
-	item.innerHTML = info;
+	document.getElementById("change2").innerHTML = "A network switch connects devices on a LAN (Local Area Network). They receive data from one device and transmit this data to the device on the network with the correct MAC address.";
 	
-	document.getElementById("myImage2").src="https://media.discordapp.net/attachments/421038494169694219/815295595311792149/unknown.png";
+	document.getElementById("myImage2").src = "https://media.discordapp.net/attachments/421038494169694219/815295595311792149/unknown.png";
+	
+	document.getElementById("change3").innerHTML = "A router transmits data between networks, meaning that it's always connected to at least two computer networks.. On the internet, they direct data (in units called packets) to their destination."; 
 }
 
 function showTypes() {
-	var item = document.getElementById("change1");
-	var info = "Utility system software helps to maintain or configure a computer. Many useful utilities are already pre-installed with the operating system.";
-	item.innerHTML = info;
+	document.getElementById("change1").innerHTML = "There are two common types of networks that you may have heard of before.";
 	
-	document.getElementById("myImage").src="https://media.discordapp.net/attachments/458708267670044683/814962208441761792/unknown.png";
+	document.getElementById("myImage").src = "https://media.discordapp.net/attachments/458708267670044683/815532909539754015/unknown.png";
 	
-	item = document.getElementById("change2");
-	info = "This is picture represents an anti-virus software, one of the most common utlity softwares.";
-	item.innerHTML = info;
+	document.getElementById("change2").innerHTML = "A local area network (LAN) covers a small geographical area located on a single site. They are often found in businesses, schools and universities and are either wired or wireless.";
+	
+	document.getElementById("myImage2").src = "https://media.discordapp.net/attachments/458708267670044683/815536633000099840/unknown.png";
+	
+	document.getElementById("change3").innerHTML = "A wide area network (WAN) connects LANs that are in different geographic locations. WANs may be connected using fibre or copper telephone lines, satellite links or radio links. The Internet is actually one big WAN.";
 }
 
 function showProtocols() {
-	var item = document.getElementById("change1");
-	var info = "A software licence is an agreement that allows one or more individuals to legally use a piece of software. Licences and copyright laws control whether a piece of software can be modified or shared.";
-	item.innerHTML = info;
+	document.getElementById("change1").innerHTML = "A software licence is an agreement that allows one or more individuals to legally use a piece of software. Licences and copyright laws control whether a piece of software can be modified or shared.";
 	
 	document.getElementById("myImage").src="https://cdn2.iconfinder.com/data/icons/metro-uinvert-dock/256/OS_Android.png";
 	
-	item = document.getElementById("change2");
-	info = "Android OS, a very popular open source operating system for smartphones.";
-	item.innerHTML = info;
+	document.getElementById("change2").innerHTML = "Android OS, a very popular open source operating system for smartphones.";
 }
 </script>
 
