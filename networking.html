@@ -8,7 +8,18 @@
 <link rel="stylesheet" href="buttonstyles.css">
 
 <style>
+.comparing {
+	border-left: 10px solid orange;
+	background-color: #ffe6a1;
+	color: black;
+	height: 350px;
+	margin: 10px;
+}
 
+.table {
+	padding: 13px 0;
+	margin: 20px;
+}
 </style>
 
 </head>
@@ -28,36 +39,53 @@
 
 <h2> Computer networks allow the sharing of files, data, and other types of information giving authorised users the ability to access information stored on other computers on the network. </h2>
 <h3> What area of computer networks would you like to learn about? </h3>
+
 <ul class="topics">
 	<li class="choose"><button onclick="showHardware()"><span><h2>Network hardware</h2></span></button></li>
 	<li class="choose"><button onclick="showTypes()"><span><h2>Network types</h2></span></button></li>
 	<li class="choose"><button onclick="showProtocols()"><span><h2>Network protocols</h2></span></button></li>
 </ul>
 
-<div id="change1"><h5> Select a topic! </h5></div>
+<h4 id="change1"> Select a topic! </h4>
 <img id="myImage" src="https://media.discordapp.net/attachments/458708267670044683/817031140522328075/unknown.png" style="width:530px;height:470px;">
 <p id="change2"></p>
 <img id="myImage2">
 <p id="change3"></p>
 
-<table id="table1" style="width:100%;display: none">
-	<tr>
-		<th><h4>LANs</h4></th>
-		<th><h4>WANs</h4></th>
-	</tr>
-	<tr>
-		<td>Covers a small geographical area.</td>
-		<td>Connects LANs in different geographical areas.</td>
-	</tr>
-	<tr>
-		<td>All its hardware is owned by the organisation that uses it.</td>
-		<td>Organisations hire infrastructure (such as telephone lines) from telecommunications companies who own and manage the WAN.</td>
-	</tr>
-	<tr>
-		<td>Cheap and inexpensive to set up.</td>
-		<td>Much more expensive to set up and maintain.</td>
-	</tr>
-</table>
+<div id="comparingNetworks" class="comparing" style="display: none">
+	<div class="table">
+		<h3>Here is a table comparing the two types of networks:</h3>
+		<table style="width:80%">
+			<tr>
+				<th><h4>LANs</h4></th>
+				<th><h4>WANs</h4></th>
+			</tr>
+			<tr>
+				<td>Covers a small geographical area.</td>
+				<td>Connects LANs in different geographical areas.</td>
+			</tr>
+			<tr>
+				<td>All its hardware is owned by the organisation that uses it.</td>
+				<td>Organisations hire infrastructure (such as telephone lines) from telecommunications companies who own and manage the WAN.</td>
+			</tr>
+			<tr>
+				<td>Cheap and inexpensive to set up.</td>
+				<td>Much more expensive to set up and maintain.</td>
+			</tr>
+			<tr>
+				<td>Found in businesses, schools and universities.</td>
+				<td>Used by organisations that have offices in multiple countries.</td>
+			</tr>
+			<tr>
+				<td>Are either wired or wireless.</td>
+				<td>May be connected using fibre or copper telephone lines, satellite links or radio links.</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<img id="myImage3">
+<p id="change4"></p>
 
 <p>Enjoy some study music :)</p>
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/991807054&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/hazysofia" title="hazy sofia" target="_blank" style="color: #cccccc; text-decoration: none;">The best singer ever</a> · <a href="https://soundcloud.com/hazysofia/boats" title="boats" target="_blank" style="color: #cccccc; text-decoration: none;">The best song ever</a></div>
@@ -75,7 +103,10 @@ function showHardware() {
 	
 	document.getElementById("change3").innerHTML = "A router transmits data between networks, meaning that it's always connected to at least two computer networks.. On the internet, they direct data (in units called packets) to their destination."; 
 	
-	document.getElementById("table1").style="width:100%;display: none";
+	document.getElementById("comparingNetworks").style = "display: none";
+	
+	document.getElementById("myImage3").src = "https://media.discordapp.net/attachments/421038494169694219/818111518654332969/unknown.png";
+	document.getElementById("change4").innerHTML = "A network adapter allows the device to connect to both wired or wireless networks."
 }
 
 function showTypes() {
@@ -91,7 +122,7 @@ function showTypes() {
 	
 	document.getElementById("change3").innerHTML = "A wide area network (WAN) connects LANs that are in different geographic locations. WANs may be connected using fibre or copper telephone lines, satellite links or radio links. The Internet is actually one big WAN.";
 	
-	document.getElementById("table1").style="width:100%;display: block";
+	document.getElementById("comparingNetworks").style="display: block";
 }
 
 function showProtocols() {
@@ -107,8 +138,7 @@ function showProtocols() {
 	
 	document.getElementById("change3").innerHTML = "Communication between different networks using IP addresses, which are assigned either manually or automatically before the device can access the network.";
 	
-	document.getElementById("table1").style="width:100%;display: none";
-
+	document.getElementById("comparingNetworks").style="display: none";
 }
 </script>
 
