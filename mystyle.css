@@ -49,3 +49,7 @@
 .links a:hover {
 	background-color: #adadad;
 }
+
+table, th, td {
+	border: 1px solid white;
+}
