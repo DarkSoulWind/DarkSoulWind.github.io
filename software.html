@@ -8,7 +8,33 @@
 <link rel="stylesheet" href="buttonstyles.css">
 
 <style>
+.info1 {
+	border-style: inset;
+	border-color: #e07800;
+	border-width: 10px;
+	padding: 5px;
+}
 
+.comparison1 {
+	border-left: 10px solid orange;
+	background-color: #ffe6a1;
+	color: black;
+	height: 320px;
+	margin: 10px;
+}
+
+.table {
+	padding: 13px 0;
+	margin: 25px;
+}
+
+.comparison2 {
+	border-left: 10px solid orange;
+	background-color: #ffe6a1;
+	color: black;
+	height: 320px;
+	margin: 10px;
+}
 </style>
 
 </head>
@@ -35,8 +61,93 @@
 </ul>
 
 <h5 id="change1"> Select a topic! </h5>
-<img id="myImage" src="http://www.pngmart.com/files/3/Software-PNG-Picture.png" alt="photo" style="width=625px;height=400px;">
-<div id="change2"><p></p></div>
+<img id="myImage1" src="http://www.pngmart.com/files/3/Software-PNG-Picture.png" alt="photo" style="width=625px;height=400px;">
+<p id="change2"></p>
+
+<div id="opensource" style="display: none">
+	<div class="info1">
+		<h4>Open source software is given away with its source code</h4>
+		<ul>
+			<li>This is a type of software where the source code is made freely available, meaning users may legally modify the code to create their own spin-off software, which can be shared under the same licence and terms as the original software.</li>
+			<li>Popular open source software is always supported by a strong online community of users who actively help to improve the software - anyone can play with the source code and suggest bug fixes and improvements to the original developers.</li>
+			<li>Several examples of open source software include popular web browser Mozilla Firefox, photo editor GIMP and VLC media player.</li>
+		</ul>
+	</div>
+	<div class="comparison1">
+		<div class="table">
+			<h4>Pros and cons of open-source software:</h4>
+			<table style="width:100%">
+				<tr>
+					<th>Advantages of Open Source Software</th>
+					<th>Disadvantages of Open Source Software</th>
+				</tr>
+				<tr>
+					<td>
+						<ul>
+							<li>It is (usually) free.</li>
+							<li>Made for the greater good, not profit - it benefits everyone, encourages collaboration, sharing of ideas.</li>
+							<li>Software can be adapted by users to fit their needs.</li>
+							<li>Wide pool of collaborators can be more creative and innovative than the programmers of one company.</li>
+							<li>Popular software is very reliable and secure - any problems are quickly solved by the community.</li>
+						</ul>
+					</td>
+					<td>
+						<ul>
+							<li>Small projects may not get regular updates and so could be buggy or have unpatched security holes.</li>
+							<li>There may be limited user documentation.</li>
+							<li>No warranties if something goes wrong.</li>
+							<li>No customer support, althout community forums will often make up for this.</li>
+							<li>Companies using open-source code to make custom software may not want competitors to see their code, but they have no choice.</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+
+<img id="myImage2">
+<p id="change3"></p>
+
+<div id="closedsource" style="display: none">
+	<div class="info1">
+	<h4>Proprietary software is Closed Source Software</h4>
+		<ul>
+			<li>This is a type of software where only the compiled code is released, and the source code remains a closely-guarded secret. They are usually paid for.</li>
+			<li>Proprietary software licenses restrict the modification, copying and redistribution of the software.</li>
+			<li>This software is often used by businesses, as they tend to have better customer support options.</li>
+			<li>Examples of proprietary software include Microsoft Office and Adobe Creative Cloud.</li>
+		</ul>
+	</div>
+	<div class="comparison2">
+		<div class="table">
+			<h4>Pros and cons of proprietary software:</h4>
+			<table style="width:100%">
+				<tr>
+					<th>Advantages of Proprietary Software</th>
+					<th>Disadvantages of Proprietary Software</th>
+				</tr>
+				<tr>
+					<td>
+						<ul>
+							<li>Typically comes with warranties, documentation, and customer support.</li>
+							<li>Should be well-tested and reliable as the company's reputation depends on this.</li>
+							<li>Fixes and updates come regularly, while open source will vary more.</li>
+							<li>Usually cheaper for companies than developing their own custom-built software.</li>
+						</ul>
+					</td>
+					<td>
+						<ul>
+							<li>Can be expensive (Final Cut Pro at $299).</li>
+							<li>Software may not exactly fit a user's needs, and they can't do anything about it.</li>
+							<li>Software companies may not maintain older software after warrranties expire - they'll want people to buy their latest product.</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
 
 <p>Enjoy some study music :)</p>
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/991807054&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/hazysofia" title="hazy sofia" target="_blank" style="color: #cccccc; text-decoration: none;">The best singer ever</a> · <a href="https://soundcloud.com/hazysofia/boats" title="boats" target="_blank" style="color: #cccccc; text-decoration: none;">The best song ever</a></div>
@@ -45,25 +156,36 @@
 function showOS() {
 	document.getElementById("change1").innerHTML = "An OS (Operating System) is a complex piece of software found on most computer systems.";
 	
-	document.getElementById("myImage").src="https://media.discordapp.net/attachments/458708267670044683/814960360218034246/unknown.png";
+	document.getElementById("myImage1").src="https://media.discordapp.net/attachments/458708267670044683/814960360218034246/unknown.png";
 	
 	document.getElementById("change2").innerHTML = "This is a desktop PC running Windows 95.";
+	
+	document.getElementById("opensource").style = "display: none";
+	document.getElementById("closedsource").style = "display: none";
 }
 
 function showUtility() {
 	document.getElementById("change1").innerHTML = "Utility system software helps to maintain or configure a computer. Many useful utilities are already pre-installed with the operating system.";
 	
-	document.getElementById("myImage").src="https://media.discordapp.net/attachments/458708267670044683/814962208441761792/unknown.png";
+	document.getElementById("myImage1").src="https://media.discordapp.net/attachments/458708267670044683/814962208441761792/unknown.png";
 	
 	document.getElementById("change2").innerHTML = "This is picture represents an anti-virus software, one of the most common utlity softwares.";
+	
+	document.getElementById("opensource").style = "display: none";
+	document.getElementById("closedsource").style = "display: none";
 }
 
 function showLicence() {
 	document.getElementById("change1").innerHTML = "A software licence is an agreement that allows one or more individuals to legally use a piece of software. Licences and copyright laws control whether a piece of software can be modified or shared.";
 	
-	document.getElementById("myImage").src="https://cdn2.iconfinder.com/data/icons/metro-uinvert-dock/256/OS_Android.png";
-	
+	document.getElementById("myImage1").src = "https://cdn2.iconfinder.com/data/icons/metro-uinvert-dock/256/OS_Android.png";
 	document.getElementById("change2").innerHTML = "Android OS, a very popular open source operating system for smartphones.";
+	
+	document.getElementById("opensource").style = "display: block";
+	document.getElementById("closedsource").style = "display: block";
+	
+	document.getElementById("myImage2").src = "https://upload.wikimedia.org/wikipedia/en/9/9f/2015_Final_Cut_Pro_Logo.png";
+	document.getElementById("change3").innerHTML = "Final Cut Pro, proprietary software developed by Apple inc. for video editing on Macintosh computers.";
 }
 </script>
 
