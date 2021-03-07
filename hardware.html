@@ -8,7 +8,12 @@
 <link rel="stylesheet" href="buttonstyles.css">
 
 <style>
-
+.info1 {
+	border-style: inset;
+	border-color: #e07800;
+	border-width: 10px;
+	padding: 25px;
+}
 </style>
 
 </head>
@@ -38,6 +43,44 @@
 <img id="myImage" src="http://www.pngmart.com/files/7/Desktop-Computer-PNG-File.png" alt="photo" width="500" height="333">
 <p id="change2" style="text-align: center"></p>
 
+<div id="cpuParts" style="display: none">
+	<h3>The CPU has three main parts:</h3>
+	<div class="info1">
+		<h4>The Control Unit (CU)</h4>
+		<ul>
+			<li>The Control Unit's main job is to manage the fetching, decoding and execution of program instructions by following the fetch-decode-execute cycle.</li>
+			<li>It also controls the flow of data inside and outside the CPU.</li>
+		</ul>
+	</div>
+	<div class="info1" style="margin-top: 20px">
+		<h4>The Arithmetic Logic Unit (ALU)</h4>
+		<ul>
+			<li>The Arithmetic Logic Unit's job is to do all the calculations.</li>
+			<li>This can include simple addition and subtraction, comparing the sizes of numbers and multiplications and divisions using repeated addition and subtraction.</li>
+			<li>It can also include logic operations such as AND, OR and NOT nad binary shifts - don't forget that computers only process binary data.</li>
+		</ul>
+	</div>
+	<div class="info1" style="margin-top: 20px">
+		<h4>The Cache</h4>
+		<ul>
+			<li>The cache is very fast memory in the CPU, much faster than RAM.</li>
+			<li>It stores regularly used data so that the CPU can access it quickly the next time it's used.</li>
+			<li>When the CPU requests data, it checks the cache first to see if the data is there. If not, it will fetch it from the RAM.</li>
+			<li>They have a very low capacity and are expensive compared to RAM and secondary sotrage.</li>
+			<li>
+				There are three different levels of cache memory:
+				<ol>
+					<li>L1 is quicket but has the lowest capacity.</li>
+					<li>L2 is slower than L1 but can hold more.</li>
+					<li>L3 is the slower, but can hold the most.</li>
+				</ol>
+			</li>
+		</ul>
+	</div>
+	<h3 style="text-align: center;padding: 20px">A diagram of the CPU and its components:</h3>
+	<img src="http://www.it4nextgen.com/wp-content/uploads/2017/01/cpu-block-diagram.png" style="padding: 1px">
+</div>
+
 <p>Enjoy some study music :)</p>
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/991807054&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/hazysofia" title="hazy sofia" target="_blank" style="color: #cccccc; text-decoration: none;">The best singer ever</a> · <a href="https://soundcloud.com/hazysofia/boats" title="boats" target="_blank" style="color: #cccccc; text-decoration: none;">The best song ever</a></div>
 
@@ -48,6 +91,8 @@ function showCPU() {
 	document.getElementById("myImage").src="https://pngimg.com/uploads/cpu/cpu_PNG50.png";
 	
 	document.getElementById("change2").innerHTML = "This is an Intel Core i9-12900K CPU.";
+	
+	document.getElementById("cpuParts").style = "display: block";
 }
 
 function showRAM() {
@@ -56,6 +101,8 @@ function showRAM() {
 	document.getElementById("myImage").src="https://img1.exportersindia.com/product_images/bc-full/2018/8/5842352/server-memory-1535010451-4222260.png";
 	
 	document.getElementById("change2").innerHTML = "This is 16GB of Corsair Vengeance RGB Pro RAM.";
+	
+	document.getElementById("cpuParts").style = "display: none";
 }
 
 function showStorage() {
@@ -64,6 +111,8 @@ function showStorage() {
 	document.getElementById("myImage").src="https://images.samsung.com/is/image/samsung/uk-970-evo-nvme-m2-ssd-mz-v7e250bw-frontblack-100317936?$720_576_PNG$";
 	
 	document.getElementById("change2").innerHTML = "This is a Samsung 970 Evo solid state drive.";
+	
+	document.getElementById("cpuParts").style = "display: none";
 }
 </script>
 
