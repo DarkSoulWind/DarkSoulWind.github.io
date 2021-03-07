@@ -28,6 +28,21 @@
 	height: 700px;
 	margin: 10px;
 }
+
+.theLayers {
+	border-left: 10px solid orange;
+	background-color: #ffe6a1;
+	color: black;
+	height: 275px;
+	margin: 10px;
+}
+
+.thePros {
+	border-style: inset;
+	border-color: #e07800;
+	border-width: 10px;
+	padding: 5px;
+}
 </style>
 
 </head>
@@ -107,42 +122,42 @@
 				<th><h4>What is it used for?</h4></th>
 			</tr>
 			<tr>
-				<td><h5>TCP</h5></td>
+				<th><h5>TCP</h5></th>
 				<td>Transmission Control Protocol</td>
 				<td>Responsible for splitting data into packets and reassembling the packets back into the original data once they reach the receiving device, as well as checking that data is correctly send and delivered.</td>
 			</tr>
 			<tr>
-				<td><h5>IP</h5></td>
+				<th><h5>IP</h5></th>
 				<td>Internet Protocol</td>
 				<td>Responsible for directing packets to their destination across the network.</td>
 			</tr>
 			<tr>
-				<td><h5>HTTP</h5></td>
+				<th><h5>HTTP</h5></th>
 				<td>Hyper Text Transfer Protocol</td>
 				<td>Used by web browsers to access websites and communicate with web servers.</td>
 			</tr>
 			<tr>
-				<td><h5>HTTPS</h5></td>
+				<th><h5>HTTPS</h5></th>
 				<td>HTTP Secure</td>
 				<td>A more secure version of HTTP. Encrypts all information sent and received.</td>
 			</tr>
 			<tr>
-				<td><h5>FTP</h5></td>
+				<th><h5>FTP</h5></th>
 				<td>File Transfer Protocol</td>
 				<td>Used to access, edit and move files between devices on a network.</td>
 			</tr>
 			<tr>
-				<td><h5>POP3</h5></td>
+				<th><h5>POP3</h5></th>
 				<td>Post Office Protocol - version 3</td>
 				<td>Used to retrieve emails from a server. The server holds the email until you download it, and it is then deleted from the server.</td>
 			</tr>
 			<tr>
-				<td><h5>IMAP</h5></td>
+				<th><h5>IMAP</h5></th>
 				<td>Internet Message Access Protocol</td>
 				<td>Used to retrieve emails from a server. The server holds the email until you delete it - you only download a copy. Used by most web-based email clients like gmail.</td>
 			</tr>
 			<tr>
-				<td><h5>SMTP</h5></td>
+				<th><h5>SMTP</h5></th>
 				<td>Simple Mail Transfer Protocol</td>
 				<td>Used to send emails. Also used to transfer emails between servers.</td>
 			</tr>
@@ -150,32 +165,52 @@
 	</div>
 </div>
 
-<div id="layerProtocols">
+<div id="layerProtocols" style="display: none">
 	<h3>Network protocols are divided into layers</h3>
 	<ul>
-		<li>A layer is a group of protocols which have similar functions</li>
-		<li>They are self-contained, meaning protocols in each layer don't need to know what's happening in other layers</li>
-		<li>Each layer serves the layer above it - it does the hidden work needed for an action on the layer above</li>
+		<li>A layer is a group of protocols which have similar functions.</li>
+		<li>They are self-contained, meaning protocols in each layer don't need to know what's happening in other layers.</li>
+		<li>Each layer serves the layer above it - it does the hidden work needed for an action on the layer above.</li>
 	</ul>
-	<h5>Below is the 4-layer model of network protocols</h5>
 	<div class="theLayers">
-		<table style="width:80%">
-			<tr>
-				<th><h4>Layer</h4></th>
-				<th><h4>What protocols this layer covers</h4></th>
-				<th><h4>Protocol examples</th></h4>
-			</tr>
-			<tr>
-				<th>Application layer</th>
-				<th>Turning data into websites and other applications, and vice versa.</th>
-				<th>HTTP, FTP, SMTP</th>
-			</tr>
-			<tr>
-				<th>Transport layer</th>
-				<th>Splitting data into packets and checking data is sent and delivered.</th>
-				<th>TCP</th>
-			</tr>
-		</table>
+		<div class="table">
+			<h4>Below is the example 4-layer model of network protocols</h4>
+			<table style="width:80%">
+				<tr>
+					<th><h4>Layer</h4></th>
+					<th><h4>What protocols this layer covers</h4></th>
+					<th><h4>Protocol examples</th></h4>
+				</tr>
+				<tr>
+					<th>Application layer</th>
+					<td>Turning data into websites and other applications, and vice versa.</td>
+					<td>HTTP, FTP, SMTP</td>
+				</tr>
+				<tr>
+					<th>Transport layer</th>
+					<td>Splitting data into packets and checking data is sent and delivered.</td>
+					<td>TCP</td>
+				</tr>
+				<tr>
+					<th>Network layer</th>
+					<td>Making connections between networks and directing data.</td>
+					<td>IP</td>
+				</tr>
+				<tr>
+					<th>Data link layer</th>
+					<td>Passing data as electrical signals over the physical network.</td>
+					<td>Ethernet</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="thePros">
+		<h4 class="heading1">There are several advantages to the use of network layers:</h4>
+		<ul>
+			<li>It breaks network communication into manageable pieces, helping developers concentrate on only one area of the network without having to worry about the others.</li>
+			<li>As they are self-contained, they can efficiently be changed without the other layers being affected.</li>
+			<li>Having standards for each layer forces companies to make compatible, universal hardware hardware and software, so different brands will and always will work with each other in the same way.</li>
+		</ul>
 	</div>
 </div>
 
@@ -202,6 +237,7 @@ function showHardware() {
 	document.getElementById("change4").innerHTML = "A network adapter allows the device to connect to both wired or wireless networks. These days, they're typically soldered directly to the motherboard."
 	
 	document.getElementById("theProtocols").style="display: none";
+	document.getElementById("layerProtocols").style="display: none";
 }
 
 function showTypes() {
@@ -221,6 +257,7 @@ function showTypes() {
 	document.getElementById("hardware-protocols1").style="display: none";
 	
 	document.getElementById("theProtocols").style="display: none";
+	document.getElementById("layerProtocols").style="display: none";
 }
 
 function showProtocols() {
@@ -240,6 +277,7 @@ function showProtocols() {
 	document.getElementById("hardware-protocols1").style="display: none";
 	
 	document.getElementById("theProtocols").style="display: block";
+	document.getElementById("layerProtocols").style="display: block";
 }
 </script>
 
