@@ -14,6 +14,19 @@
 	border-width: 10px;
 	padding: 25px;
 }
+
+.column {
+	float: left;
+	width: 30%;
+	padding: 15px;
+}
+
+.row::after {
+ 	content: "";
+ 	clear: both;
+ 	display: table;
+}
+
 </style>
 
 </head>
@@ -94,7 +107,30 @@
 	</div>
 </div>
 
-<div id="secondaryStorage">
+<div id="secondaryStorage" style="display: none">
+	<div class="row">
+		<div class="column">
+			<img src="https://media.discordapp.net/attachments/421038494169694219/818268522714497055/unknown.png" style="width:80%">
+			<h4>Hard Disk Drives are high-capacity, reliable storage.</h4>
+			<p>A Hard Disk Drive (HDD) is made up of a stack of magnetised metal disks that spin thousands of times a second. Data is stored magnetically in small areas on the disk's cicular tracks. A moving arm can access these areas and read or write data. They have a long read/write life than SSDs and are relatively cheap, as well as having high capacity, which makes them reliable for use as an external storage. Because of their moving parts, HDDs are susceptible to damage by large impacts like being dropped, which could result in the loss of data.</p>
+		</div>
+		<div class="column">
+			<img src="https://images.samsung.com/is/image/samsung/uk-860-qvo-sata-3-2-5-ssd-mz-76q4t0bw-frontblack-131383663?$720_576_PNG$" style="width:75%">
+			<h4>Solid State Drives are fast and reliable secondary storage.</h4>
+			<p>Unlike HDDs, a Solid State Drive (SSD) contains no moving parts, so they are more shock-proof than HDDs. Because they use flash technology, they have much faster read/write times than HDDs, meaning booting up your computer and opening programs and files is very speedy. They also don't require defragmenting, and are quieter. However, they are quite expensive and come with smaller storage options, as well as having a much shorter read/write life than HDDs, so they deteriorate faster.</p>
+		</div>
+		<div class="column">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/CD_icon_test.svg/1200px-CD_icon_test.svg.png" style="width:60%">
+			<h4>Optical discs are cheap and robust secondary storage.</h4>
+			<p>Optical discs come in a variety of forms:</p>
+			<ul>
+				<li>CDs, which can hold around 700MB of data.</li>
+				<li>DVDs, which can hold around 4.7GB of data.</li>
+				<li>Blu-rays, which can hold around 25GB of data.</li>
+			</ul>
+			<p>They have some advantages, such as their low cost per GB, portability, and their water and shock resistance. They are however, scratched easily. As well as that, their use these days are declining. As Internet speeds have increased, steaming and downloading services like Netflix, Spotify and Steam have removed the need for optical drives, not to mention that mobile devices like phones and tablets don't have optical drives.</p>
+		</div>
+	</div>
 </div>
 
 <p>Enjoy some study music :)</p>
@@ -110,6 +146,7 @@ function showCPU() {
 	
 	document.getElementById("cpuParts").style = "display: block";
 	document.getElementById("RAM").style = "display: none";
+	document.getElementById("secondaryStorage").style = "display: none";
 }
 
 function showRAM() {
@@ -121,6 +158,7 @@ function showRAM() {
 	
 	document.getElementById("cpuParts").style = "display: none";
 	document.getElementById("RAM").style = "display: block";
+	document.getElementById("secondaryStorage").style = "display: none";
 }
 
 function showStorage() {
@@ -132,6 +170,7 @@ function showStorage() {
 	
 	document.getElementById("cpuParts").style = "display: none";
 	document.getElementById("RAM").style = "display: none";
+	document.getElementById("secondaryStorage").style = "display: block";
 }
 </script>
 
